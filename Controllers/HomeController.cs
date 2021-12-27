@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SalesApp.Models;
+using SalesApp.Models.ViewModels;
 
 namespace SalesApp.Controllers;
 
@@ -15,6 +15,15 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        return View();
+    }
+
+        public IActionResult About()
+    {
+        ViewData["Message"]="Sales Web App message";
+        ViewData["Professor"]="Nelio alves";
+        ViewData["email"]="nelio@gmail.com";
+
         return View();
     }
 
